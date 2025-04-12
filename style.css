@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+}
+
+/* BAGIAN HEADER  */
+
+:root{
+    --redsunset: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
+    --unguhijaubiru : linear-gradient(to right, #8360c3, #2ebf91);
+    --garis :linear-gradient(to right, #ffeeee, #ddefbb);
+    --bg-2:linear-gradient(to right, #6190e8, #a7bfe8);
+    --bg-jalan: linear-gradient(to right, #be93c5, #7bc6cc);
+    --pertama: linear-gradient(to right, #2c3e50, #4ca1af);
+}
+
+header{
+    top: 0;
+    z-index: 1000;
+    position: sticky;
+    animation: kiri 2s ease;
+    box-sizing: border-box;
+    padding: 20px;
+    background-image: url(foto/mcgg.jpg);
+    background-position: center;
+    background-size: 100%;
+    z-index: 1;
+}
+
+.hiden{
+    animation: hilangH 1s;
+}
+
+/* Animasi Hilang */
+
+@keyframes hilangH{
+    to{
+        overflow: hidden;
+    }
+}
+
+.pala h2{
+    color: aqua;
+}
+
+.pala{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    list-style: none;
+    margin-right: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/* BAGIAN TENTANG SAYA */
+
+
+.container{
+    background-image: var(--pertama);
+    height: 500px;
+    place-items: center;
+    justify-content: space-around;
+    display: flex;
+    padding: 30px 10%;
+}
+
+.container p{
+    overflow: hidden;
+    animation: kiri 1.5s ease;
+    color: aliceblue;
+}
+
+.container h1{
+    overflow: hidden;
+    animation: kiri 1.5s ease;
+    color: aliceblue;
+}
+
+.foto{
+    animation: kanan 2s ease;
+}
+
+/* ANIMASI SLIDE DARI KIRI */
+@keyframes kiri{
+    0%{
+        opacity: 0;
+        transform:translateX(-100%) ;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+/* ANIMASI SLIDE DARI KANAN */
+@keyframes kanan{
+    0%{
+        opacity: 0;
+        transform:translateX(100%) ;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+/* BAGIAN TEXT RANDOM */
+.jalan{
+    background-image: var(--bg-2);
+    overflow: hidden;
+    padding: 20px;
+    display: grid;
+    grid-template-areas:
+    "satu dua tiga empat lima enam tujuh"
+    ;
+}
+
+.tes{
+    overflow: hidden;
+    animation: jalan 10s linear infinite;
+}
+
+main{
+    animation: bgjalan 4s alternate-reverse infinite;
+    background-size: 200%;
+    background-position: left;
+    text-align: center;
+    background-image: var(--bg-jalan);
+}
+
+/* ANIMASI FOTO JALAN SCROL DAN TEXT */
+.fotoM{
+    overflow: hidden;
+    /* animation: fotoK linear;
+    animation-timeline: view(); */
+}
+
+.fotoM img{
+    overflow: hidden;
+    margin: 10px;
+}
+
+
+.scrol{
+    padding: 15px;
+     display: grid;
+    grid-template-areas:
+    "satu dua"
+    ;
+
+    /* grid-template-columns: 70% 30%; */
+
+}
+
+.text{
+    display: flex;
+}
+
+.tengah{
+    margin: auto;
+}
+
+
+@keyframes bgjalan {
+    0%{
+        background-position: left;
+    }
+
+    100%{
+        background-position: right;
+    }
+}
+
+@keyframes fotoK{
+    0%{
+        overflow: hidden;
+        transform: translateX(-100%);
+    }
+
+    100%{
+        overflow: hidden;
+        transform: translateX(100%);
+    }
+}
+
+
+
+
+@keyframes jalan{
+    0%{
+        transform: translateX(1500px);
+    }
+
+    100%{
+        transform: translateX(-800px);
+    }
+}
+
+/* PERKENALAN ORANGNYA */
+
+.kenal{
+    display: grid;
+    grid-template-areas:
+    "satu dua tiga empat"
+    "lima enam tujuh delapan"
+    "sebelas sembilan sepuluh duabelas"
+    ;
+    padding: 20px;
+    text-align: center;
+    gap: 15px;
+}
+
+.kartu{
+    background: linear-gradient(to right, #be93c5, #7bc6cc);;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 5px 5px 10px;
+}
+
+.des1{
+    grid-area: satu;
+}
+
+.des2{
+    grid-area: dua;
+}
+.des3{
+    grid-area: tiga;
+}
+.des4{
+    grid-area: empat;
+}
+.des5{
+    grid-area: lima;
+}
+.des6{
+    grid-area: enam;
+}
+.des7{
+    grid-area: tujuh;
+}
+.des8{
+    grid-area: delapan;
+}
+.des9{
+    grid-area: sembilan;
+}
+.des10{
+    grid-area: sepuluh;
+}
+
+.des11{
+    padding: 50px;
+    grid-area: sebelas;
+}
+
+.des11 img{
+    height: 100px;
+}
+
+.des12{
+    padding: 50px;
+    grid-area: duabelas;
+}
+
+.des12 img{
+    height: 100px;
+}
+/* ANIMASI GARIS DI TEXT JALAN */
+.garisA{
+    animation: garisJ2 5s linear infinite;
+    display: block;
+    height: 5px;
+    left: 100%;
+}
+
+.garisB{
+    width: 100%;
+    display: block;
+    height: 5px;
+    width: 100%;
+    animation: garisJ 5s linear infinite;
+}
+
+.jalanB{
+    overflow: hidden;
+}
+
+@keyframes garisJ{
+    0%{
+        
+        transform: translateX(-100%);
+        background-image: var(--garis);
+        
+    }
+
+    100%{
+        transform: translateX(100%);
+        background-image: var(--garis);
+    }
+}
+@keyframes garisJ2{
+    0%{
+        
+        transform: translateX(100%);
+        background-image: var(--garis);
+        
+    }
+
+    100%{
+        transform: translateX(-100%);
+        background-image: var(--garis);
+    }
+}
+
+.tentang{
+    padding: 50px;
+}
+
+.Bmain{
+    background-image: var(--unguhijaubiru);
+    padding: 20px;
+    text-align: center;
+    background-size: 150%;
+    animation: bgjalan 1s infinite alternate-reverse;
+}
+
+.rahasia{
+    background-size: 150%;
+    animation: bgjalan 2s infinite alternate-reverse;
+    text-align: center;
+    background-image: var(--redsunset);
+    padding: 20px;
+}
+
+.rahasia h3{
+    color: aliceblue;
+}
+
+.rahasia p{
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+
+.rahasia button{
+    background: #2c3e50;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.rahasia button:hover{
+    background: aliceblue;
+}
+
+footer{
+    justify-content: space-between;
+    padding: 15px;
+    background-image: var(--pertama);
+    display: flex;
+}
+
+footer h3{
+    color: aliceblue;
+}
+
+footer img{
+    box-sizing: border-box;
+    width: 100%;
+    height: 20px;
+}

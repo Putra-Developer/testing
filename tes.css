@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+  }
+  
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    padding-left: 50px;
+    background-color: #111;
+    background-image: url('your-image.jpg'); /* Ganti jika perlu */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Efek overlay */
+    z-index: 0;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+  }
+  
+  .sub-title {
+    font-size: 20px;
+    color: #00bfff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .main-title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 10px 0;
+  }
+  
+  .description {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 10px;
+  }
+  

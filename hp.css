@@ -1,0 +1,333 @@
+:root{
+    --backtoearth: linear-gradient(to right, #00c9ff, #92fe9d);
+    --freshturboscent:  linear-gradient(to right, #f1f2b5, #135058);
+}   
+
+.tombol{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.tombol input{
+    display: block;
+    background-color: black;
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top:-5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.tombol span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(234,192,255);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* ANIMASI TOMBOL */
+
+.tombol span:nth-child(2){
+    transform-origin: 0 0;
+
+}
+
+.tombol span:nth-child(4){
+    transform-origin: 0 100%;
+
+}
+
+.tombol input:checked ~ span:nth-child(2){
+    background-color: white;
+    transform: rotate(45deg) translate(-1px,-1px);
+}
+
+.tombol input:checked ~ span:nth-child(4){
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px,0)
+}
+.tombol input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+@media screen and (max-width:576.98px) {
+      
+    body{
+        width: 100%;
+    }
+    /* BAGIAN HEADER */
+    .tombol{
+        display: flex;
+    }
+    
+    nav ul{
+        overflow: hidden;
+        margin-top: 17%;
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        z-index: -1;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 1s;
+        background-image: var(--freshturboscent);
+        background-size: 150%;
+        animation: hpbg 1s infinite alternate-reverse;
+    }
+
+    @keyframes hpbg {
+        0%{
+            background-position: left;
+        }
+
+        100%{
+            background-position: right;
+        }
+    }
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    nav li{
+        background-image: var(--backtoearth);
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        padding:20px ;
+        top: 0px;
+        text-align: center;
+        width: 100%;
+        display: block; 
+    }
+    
+    nav a{
+        color: #135058;
+        display: block;
+    }
+    
+    /* BAGIAN PERKENALAN PERTAMA */
+    .container{
+        display: grid;
+    }
+
+    /* BAGIAN ANIMASI TEXT JALAN */
+    .jalan{
+        background-image: var(--bg-2);
+        overflow: hidden;
+        padding: 20px;
+        display: grid;
+        grid-template-areas:
+        "satu dua tiga empat lima enam tujuh"
+        ;
+    }
+    
+    .tes{
+        overflow: hidden;
+        animation: jalan 10s linear infinite;
+    }
+    @keyframes jalan{
+        0%{
+            transform: translateX(1500px);
+        }
+    
+        100%{
+            transform: translateX(-800px);
+        }
+    }
+
+
+    /* ANIMASI GARIS DI TEXT JALAN */
+    .garisA{
+        animation: garisJ2 3s linear infinite;
+    }
+
+    .garisB{
+        animation: garisJ 3s linear infinite;
+    }
+
+    .jalanB{
+        overflow: hidden;
+    }
+
+    @keyframes garisJ{
+        0%{
+        
+            transform: translateX(-100%);
+            background-image: var(--garis);
+        
+        }
+
+        100%{
+            transform: translateX(100%);
+            background-image: var(--garis);
+        }
+    }
+    @keyframes garisJ2{
+        0%{
+        
+            transform: translateX(100%);
+            background-image: var(--garis);
+        
+        }
+
+        100%{
+            transform: translateX(-100%);
+            background-image: var(--garis);
+        }
+    }
+
+    .scrol{
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+        "satu"
+        "dua"
+        ;
+        grid-template-rows: 10% 80%;
+    }
+
+    .foto .text{
+        grid-area: satu;
+    }
+
+    .fotoM{
+        text-align: center;
+        overflow: hidden;
+        display: grid;
+        grid-area: dua;
+        grid-template-areas:
+        "satu"
+        "dua"
+        "tiga"
+        "empat"
+        ;
+    }
+    
+    .gambar{
+        animation: kananHp 1s forwards;
+        /* overflow: hidden; */
+    }
+
+    .fot1{
+
+        grid-area: satu;
+    }
+
+    .fot2{
+        grid-area: dua;
+    }
+
+    .fot3{
+        grid-area: tiga;
+    }
+
+    .fot4{
+        grid-area: empat;
+    }
+
+    @keyframes kananHp {
+        0%{
+            scale: 0.5;
+            opacity: 0.5;
+            transform: translateX(-100%);
+        }
+
+        100%{
+            scale: 1;
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+
+    .kenal{
+        display: grid;
+        grid-template-areas:
+        "satu"
+        "dua"
+        "tiga"
+        "empat"
+        "lima"
+        "enam"
+        "tujuh"
+        "delapan"
+        "sembilan"
+        "sepuluh"
+        "sebelas"
+        "duabelas"
+        ;
+        padding: 20px;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .kartu{
+        background: linear-gradient(to right, #be93c5, #7bc6cc);;
+        border-radius: 15px;
+        box-sizing: border-box;
+        padding: 20px;
+        box-shadow: 5px 5px 10px;
+    }
+    
+    .des1{
+        grid-area: satu;
+    }
+    
+    .des2{
+        grid-area: dua;
+    }
+    .des3{
+        grid-area: tiga;
+    }
+    .des4{
+        grid-area: empat;
+    }
+    .des5{
+        grid-area: lima;
+    }
+    .des6{
+        grid-area: enam;
+    }
+    .des7{
+        grid-area: tujuh;
+    }
+    .des8{
+        grid-area: delapan;
+    }
+    .des9{
+        grid-area: sembilan;
+    }
+    .des10{
+        grid-area: sepuluh;
+    }
+    
+    .des11{
+        padding: 50px;
+        grid-area: sebelas;
+    }
+    
+    .des11 img{
+        height: 100px;
+    }
+    
+    .des12{
+        padding: 50px;
+        grid-area: duabelas;
+    }
+    
+
+}

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio 3</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="password.css">
     <link rel="stylesheet" href="hp.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header id="kepala" class="hilang">
         <div class="pala">
             <h2>LOGO</h2>
             <nav id="hiden" class="hiden">
@@ -59,10 +59,12 @@
         
         <div class="scrol">
             <div class="fotoM">
-                <img src="foto/gensin.jpg" alt="" class="fot1">
-                <img src="foto/gensin.jpg" alt="" class="fot2">
-                <img src="foto/gensin.jpg" alt="" class="fot3">
-                <img src="foto/gensin.jpg" alt="" class="fot4">
+                <div class="Ftengah">
+                    <img src="foto/gensin.jpg" alt="" class="fot1" data-aos="fade-right">
+                    <img src="foto/gensin.jpg" alt="" class="fot2" data-aos="fade-right">
+                    <img src="foto/gensin.jpg" alt="" class="fot3" data-aos="fade-right">
+                    <img src="foto/gensin.jpg" alt="" class="fot4" data-aos="fade-right">
+                </div>
             </div>
             <div class="text">
                 <div class="tengah">
@@ -102,7 +104,8 @@
             <div class="kartu des6">Quod tempore praesentium ducimus blanditiis dolore, accusantium nisi eaque a sapiente! Rerum, beatae? Ratione, tenetur! Omnis accusamus facilis ex atque dolorum vel et? Quas eos facilis, itaque ea culpa nesciunt.</div>
             <div class="kartu des7">Reprehenderit voluptatibus minima commodi ducimus laboriosam eius quo autem asperiores, doloribus nostrum ullam velit laudantium exercitationem eveniet sunt sed aliquam perspiciatis ut quaerat eum accusamus. Molestias ratione ipsa non repellendus.</div>
             <div class="kartu des8">Aspernatur tempora perspiciatis, enim quibusdam voluptas atque similique eos, obcaecati veniam pariatur at tempore minus officiis quae voluptates sapiente ratione, cum fuga numquam iure? Autem maxime dolorem officiis possimus sunt.</div>
-            <div class="kartu des9">Ab blanditiis a, voluptatibus assumenda, expedita commodi corporis doloribus similique facilis eligendi molestiae explicabo illum, incidunt iusto voluptatem nemo ratione animi reprehenderit odio earum! Repellat natus blanditiis suscipit quasi! Quis!</div>
+            <div class="kartu des9">
+                Ab blanditiis a, voluptatibus assumenda, expedita commodi corporis doloribus similique facilis eligendi molestiae explicabo illum, incidunt iusto voluptatem nemo ratione animi reprehenderit odio earum! Repellat natus blanditiis suscipit quasi! Quis!</div>
             <div class="kartu des10">Cum neque amet illum earum architecto asperiores, eius sed, animi atque molestiae quaerat consequuntur alias, ad autem illo. Officia at dolore numquam adipisci corrupti neque sed accusamus sequi eius recusandae.</div>
             <div class="des11">
                 <a href=""><img src="foto/Ig Logo.png" alt=""></a>
@@ -145,7 +148,13 @@
         <h3>&copy;DEVELOPER 2025</h3>
     </footer>
 
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="password.js"></script>
     <script src="tombol.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

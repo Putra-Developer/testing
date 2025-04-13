@@ -1,4 +1,6 @@
 :root{
+    --bg-jalan: linear-gradient(to right, #be93c5, #7bc6cc);
+    --bg-2:linear-gradient(to right, #6190e8, #a7bfe8);
     --backtoearth: linear-gradient(to right, #00c9ff, #92fe9d);
     --freshturboscent:  linear-gradient(to right, #f1f2b5, #135058);
 }   
@@ -59,10 +61,14 @@
     transform: scale(0);
 }
 
-@media screen and (max-width:576.98px) {
+@media screen and (max-width:576.98px){
       
     body{
-        width: 100%;
+        width: 100% !important;
+
+
+
+        
     }
     /* BAGIAN HEADER */
     .tombol{
@@ -83,7 +89,7 @@
         transform: translateX(100%);
         opacity: 0;
         transition: all 1s;
-        background-image: var(--freshturboscent);
+        background-image: var(--bg-2);
         background-size: 150%;
         animation: hpbg 1s infinite alternate-reverse;
     }
@@ -104,7 +110,7 @@
     }
 
     nav li{
-        background-image: var(--backtoearth);
+        background-image: var(--bg-jalan);
         border-radius: 15px;
         overflow: hidden;
         margin-bottom: 20px;
@@ -153,10 +159,12 @@
 
     /* ANIMASI GARIS DI TEXT JALAN */
     .garisA{
+        overflow: hidden;
         animation: garisJ2 3s linear infinite;
     }
 
     .garisB{
+        overflow: hidden;
         animation: garisJ 3s linear infinite;
     }
 
@@ -198,16 +206,21 @@
         "satu"
         "dua"
         ;
-        grid-template-rows: 10% 80%;
+        grid-template-rows: 10% 90%;
+        grid-template-columns: 100%;
+        box-sizing: border-box;
     }
 
-    .foto .text{
+    .text{
+        display: flex;
         grid-area: satu;
     }
 
+    .tengah{
+        margin: auto;
+    }
+
     .fotoM{
-        text-align: center;
-        overflow: hidden;
         display: grid;
         grid-area: dua;
         grid-template-areas:
@@ -216,27 +229,29 @@
         "tiga"
         "empat"
         ;
+        grid-template-columns: 100%;
+        box-sizing: border-box;
+        padding: 40px;
     }
+
     
-    .gambar{
-        animation: kananHp 1s forwards;
-        /* overflow: hidden; */
-    }
-
     .fot1{
-
+        margin: auto;
         grid-area: satu;
     }
-
+    
     .fot2{
+        margin: auto;
         grid-area: dua;
     }
-
+    
     .fot3{
+        margin: auto;
         grid-area: tiga;
     }
-
+    
     .fot4{
+        margin: auto;
         grid-area: empat;
     }
 
